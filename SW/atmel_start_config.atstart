@@ -1,0 +1,1009 @@
+format_version: '2'
+name: My Project
+versions:
+  api: '1.0'
+  backend: 1.8.580
+  commit: f3d8d96e294de8dee688333bbbe8d8458a4f6b4c
+  content: unknown
+  content_pack_name: unknown
+  format: '2'
+  frontend: 1.8.580
+  packs_version_avr8: 1.0.1463
+  packs_version_qtouch: unknown
+  packs_version_sam: 1.0.1726
+  version_backend: 1.8.580
+  version_frontend: ''
+board:
+  identifier: CustomBoard
+  device: ATSAMG55J19A-AU
+details: null
+application: null
+middlewares: {}
+drivers:
+  ADC_0:
+    user_label: ADC_0
+    definition: Atmel:SAMG55_Drivers:0.0.1::ATSAMG55J19A-AU::ADC::driver_config_definition::ADC::HAL:Driver:ADC.Async
+    functionality: ADC
+    api: HAL:Driver:ADC_Async
+    configuration:
+      adc_acr_autotest: No auto test
+      adc_advanced_settings: false
+      adc_cher_ch0: true
+      adc_cher_ch1: false
+      adc_cher_ch2: false
+      adc_cher_ch3: false
+      adc_cher_ch4: false
+      adc_cher_ch5: false
+      adc_cher_ch6: false
+      adc_cher_ch7: false
+      adc_cor_diff0: Single-ended mode
+      adc_cor_diff1: Single-ended mode
+      adc_cor_diff2: Single-ended mode
+      adc_cor_diff3: Single-ended mode
+      adc_cor_diff4: Single-ended mode
+      adc_cor_diff5: Single-ended mode
+      adc_cor_diff6: Single-ended mode
+      adc_cor_diff7: Single-ended mode
+      adc_cor_off0: false
+      adc_cor_off1: false
+      adc_cor_off2: false
+      adc_cor_off3: false
+      adc_cor_off4: false
+      adc_cor_off5: false
+      adc_cor_off6: false
+      adc_cor_off7: false
+      adc_emr_aste: The average requests several trigger events
+      adc_emr_cmpall: false
+      adc_emr_cmpfilter: 0
+      adc_emr_cmpmode: 'LOW: Generates an event when the converted data is lower than
+        the low threshold of the window'
+      adc_emr_cmpsel: Channel 0
+      adc_emr_cmptype: Any conversion is performed and comparison function drives
+        the COMPE flag
+      adc_emr_osr: 12-bit
+      adc_emr_prescaler: 0
+      adc_emr_srcclk: The peripheral clock is the source for the ADC prescaler
+      adc_emr_tag: Sets CHNB field to zero in ADC_LCDR
+      adc_lccwr_highthres: 0
+      adc_lccwr_lowthres: 0
+      adc_mr_freerun: false
+      adc_mr_fwup: Both ADC core and reference voltage circuitry are OFF between conversions
+      adc_mr_sleep: 'Normal Mode: The ADC core and reference voltage circuitry are
+        kept ON between conversions'
+      adc_mr_startup: 64 periods of ADCCLK
+      adc_mr_transfer: 2
+      adc_mr_trgen: false
+      adc_mr_trgsel: External trigger
+      adc_mr_useq: false
+      adc_seqr1_usch1: Channel 0
+      adc_seqr1_usch2: Channel 1
+      adc_seqr1_usch3: Channel 2
+      adc_seqr1_usch4: Channel 3
+      adc_seqr1_usch5: Channel 4
+      adc_seqr1_usch6: Channel 5
+      adc_seqr1_usch7: Channel 6
+    optional_signals:
+    - identifier: ADC_0:AD/0
+      pad: PA17
+      mode: Enabled
+      configuration: null
+      definition: Atmel:SAMG55_Drivers:0.0.1::ATSAMG55J19A-AU::optional_signal_definition::ADC.AD.0
+      name: ADC/AD/0
+      label: AD/0
+    variant: null
+    clocks:
+      domain_group:
+        nodes:
+        - name: ADC
+          input: Master Clock (MCK)
+          external: false
+          external_frequency: 0
+        configuration:
+          adc_clock_source: Master Clock (MCK)
+  MEM2MEM:
+    user_label: MEM2MEM
+    definition: Atmel:SAMG55_Drivers:0.0.1::ATSAMG55J19A-AU::MEM2MEM::driver_config_definition::MEM2MEM::HAL:HPL:MEM2MEM
+    functionality: System
+    api: HAL:HPL:MEM2MEM
+    configuration:
+      mem2mem_enable: false
+      mem2mem_mr_tsize: The buffer size is defined in byte
+    optional_signals: []
+    variant: null
+    clocks:
+      domain_group: null
+  PMC:
+    user_label: PMC
+    definition: Atmel:SAMG55_Drivers:0.0.1::ATSAMG55J19A-AU::PMC::driver_config_definition::PMC::HAL:HPL:PMC
+    functionality: System
+    api: HAL:HPL:PMC
+    configuration:
+      $input: 9600
+      $input_id: External Clock Input
+      RESERVED_InputFreq: 9600
+      RESERVED_InputFreq_id: External Clock Input
+      _$freq_output_Embedded 32kHz RC Oscillator (OSC32K): 0
+      _$freq_output_Embedded 8/16/24 MHz Fast RC Oscillator (OSC24M): '24000000'
+      _$freq_output_External 3-20MHz Oscillator (XOSC20M): 12000000
+      _$freq_output_External 32768Hz Crystal Oscillator (XOSC32K): 0
+      _$freq_output_External Clock: 9600
+      _$freq_output_External Clock Input: 9600
+      _$freq_output_MCK / 8: 3000000
+      _$freq_output_Master Clock (MCK): 24000000
+      _$freq_output_PLLA Clock (PLLACK): 0
+      _$freq_output_PLLB Clock (PLLBCK): 0
+      _$freq_output_Programmable Clock Controller 0 (PMC_PCK0): 24000000
+      _$freq_output_Programmable Clock Controller 1 (PMC_PCK1): 0
+      _$freq_output_Programmable Clock Controller 2 (PMC_PCK2): 0
+      _$freq_output_Programmable Clock Controller 3 (PMC_PCK3): 0
+      _$freq_output_Programmable Clock Controller 4 (PMC_PCK4): 0
+      _$freq_output_Programmable Clock Controller 5 (PMC_PCK5): 0
+      _$freq_output_Programmable Clock Controller 6 (PMC_PCK6): 0
+      _$freq_output_Programmable Clock Controller 7 (PMC_PCK7): 0
+      _$freq_output_SYSTICK: 3000000
+      _$freq_output_USB Clock Controller (USB_48M): 0
+      clk_gen_cfden_enable: false
+      clk_gen_slck2_oscillator: Slow Clock (SLCK)
+      dummy_ext_clk_src: External Clock Input
+      dummy_ext_src: Specific clock input from specific pin
+      eefc_fws: 1 cycle
+      enable_dummy_ext: false
+      enable_dummy_ext_clk: true
+      enable_fclk_clock: true
+      enable_hclk_clock: true
+      enable_mainck: true
+      enable_mck: true
+      enable_mck_div_8: false
+      enable_osc24m: true
+      enable_osc32k: false
+      enable_pck0: true
+      enable_pck1: true
+      enable_pck2: true
+      enable_pck3: true
+      enable_pck4: true
+      enable_pck5: true
+      enable_pck6: true
+      enable_pck7: true
+      enable_pllack: false
+      enable_pllbck: false
+      enable_slck: false
+      enable_systick_clock: true
+      enable_usb_48m: true
+      enable_xosc20m: false
+      enable_xosc32k: false
+      fclk_clock_source: Master Clock (MCK)
+      hclk_clock_source: Master Clock (MCK)
+      mainck_arch_enable: true
+      mainck_oscillator: Embedded 8/16/24 MHz Fast RC Oscillator (OSC24M)
+      mck_arch_enable: true
+      mck_div_8_src: Master Clock (MCK)
+      mck_oscillator: Main Clock (MAINCK)
+      mck_presc: '1'
+      osc24m_arch_enable: true
+      osc24m_selector: '24000000'
+      osc32k_arch_enable: false
+      pck0_arch_enable: false
+      pck0_oscillator: Main Clock (MAINCK)
+      pck0_presc: 1
+      pck1_arch_enable: false
+      pck1_oscillator: Slow Clock (SLCK)
+      pck1_presc: 1
+      pck2_arch_enable: false
+      pck2_oscillator: Slow Clock (SLCK)
+      pck2_presc: 1
+      pck3_arch_enable: false
+      pck3_oscillator: Slow Clock (SLCK)
+      pck3_presc: 1
+      pck4_arch_enable: false
+      pck4_oscillator: Slow Clock (SLCK)
+      pck4_presc: 1
+      pck5_arch_enable: false
+      pck5_oscillator: Slow Clock (SLCK)
+      pck5_presc: 1
+      pck6_arch_enable: false
+      pck6_oscillator: Slow Clock (SLCK)
+      pck6_presc: 1
+      pck7_arch_enable: false
+      pck7_oscillator: Slow Clock (SLCK)
+      pck7_presc: 1
+      pllack_arch_enable: false
+      pllack_counter: 0
+      pllack_div: clock frequency is divided by 1
+      pllack_mul: 25
+      pllack_ref_clock: Slow Clock (SLCK)
+      pllbck_arch_enable: false
+      pllbck_counter: 0
+      pllbck_div: clock frequency is divided by 1
+      pllbck_mul: 25
+      pllbck_ref_clock: Slow Clock (SLCK)
+      slck2_arch_enable: true
+      slck_arch_enable: false
+      slck_ref_clock: Embedded 32kHz RC Oscillator (OSC32K)
+      systick_clock_div: '8'
+      systick_clock_source: Master Clock (MCK)
+      usart_ext_frequency: 9600
+      usb_48m_div: 1
+      usb_48m_oscillator: PLLA Clock (PLLACK)
+      xosc20m_arch_enable: false
+      xosc20m_bypass: false
+      xosc20m_selector: 12000000
+      xosc20m_startup_time: 62
+      xosc32k_arch_enable: false
+      xosc32k_bypass: false
+    optional_signals: []
+    variant: null
+    clocks:
+      domain_group:
+        nodes:
+        - name: CPU
+          input: CPU
+          external: false
+          external_frequency: 0
+        - name: SYSTICK
+          input: SYSTICK
+          external: false
+          external_frequency: 0
+        configuration: {}
+  DELAY_0:
+    user_label: DELAY_0
+    definition: Atmel:SAMG55_Drivers:0.0.1::ATSAMG55J19A-AU::SysTick::driver_config_definition::Delay::HAL:Driver:Delay
+    functionality: Delay
+    api: HAL:Driver:Delay
+    configuration:
+      systick_arch_tickint: false
+    optional_signals: []
+    variant: null
+    clocks:
+      domain_group: null
+  Meas_Timer:
+    user_label: Meas_Timer
+    definition: Atmel:SAMG55_Drivers:0.0.1::ATSAMG55J19A-AU::TC0::driver_config_definition::Timer::Lite:TC:Timer
+    functionality: Timer
+    api: Lite:TC:Timer
+    configuration:
+      bcr_sync: true
+      bmr_control: true
+      bmr_tc0xc0s: 'Signal connected to XC0: TIOA2'
+      bmr_tc1xc1s: 'Signal connected to XC1: TIOA2'
+      bmr_tc2xc2s: 'Signal connected to XC2: TCLK2'
+      channel0_control: true
+      channel0_mode: Channel 0 configure in Capture Mode
+      channel1_control: true
+      channel1_mode: Channel 1 configure in Capture Mode
+      channel2_control: true
+      channel2_mode: Channel 2 configure in Waveform Mode
+      cmr0_capture_abetrg: false
+      cmr0_capture_burst: The clock is not gated by an external signal
+      cmr0_capture_clki: false
+      cmr0_capture_control: true
+      cmr0_capture_cpctrg: true
+      cmr0_capture_etrgedg: The clock is not gated by an external signal
+      cmr0_capture_ldbdis: false
+      cmr0_capture_ldbstop: false
+      cmr0_capture_ldra: None
+      cmr0_capture_ldrb: None
+      cmr0_capture_sbsmplr: Load a Capture Register each selected edge
+      cmr0_capture_tcclks: XC0
+      cmr0_capture_wave: false
+      cmr0_waveform_acpa: None
+      cmr0_waveform_acpc: None
+      cmr0_waveform_aeevt: None
+      cmr0_waveform_aswtrg: None
+      cmr0_waveform_bcpb: None
+      cmr0_waveform_bcpc: None
+      cmr0_waveform_beevt: None
+      cmr0_waveform_bswtrg: None
+      cmr0_waveform_burst: The clock is not gated by an external signal
+      cmr0_waveform_clki: false
+      cmr0_waveform_control: false
+      cmr0_waveform_cpcdis: false
+      cmr0_waveform_cpcstop: false
+      cmr0_waveform_eevt: TIOB
+      cmr0_waveform_eevtedg: The clock is not gated by an external signal
+      cmr0_waveform_enetrg: false
+      cmr0_waveform_tcclks: Internal MCK/2 clock signal
+      cmr0_waveform_wave: true
+      cmr0_waveform_wavsel: UP mode without automatic trigger on RC Compare
+      cmr1_capture_abetrg: false
+      cmr1_capture_burst: The clock is not gated by an external signal
+      cmr1_capture_clki: false
+      cmr1_capture_control: true
+      cmr1_capture_cpctrg: true
+      cmr1_capture_etrgedg: The clock is not gated by an external signal
+      cmr1_capture_ldbdis: false
+      cmr1_capture_ldbstop: false
+      cmr1_capture_ldra: None
+      cmr1_capture_ldrb: None
+      cmr1_capture_sbsmplr: Load a Capture Register each selected edge
+      cmr1_capture_tcclks: XC1
+      cmr1_capture_wave: false
+      cmr1_waveform_acpa: None
+      cmr1_waveform_acpc: None
+      cmr1_waveform_aeevt: None
+      cmr1_waveform_aswtrg: None
+      cmr1_waveform_bcpb: None
+      cmr1_waveform_bcpc: None
+      cmr1_waveform_beevt: None
+      cmr1_waveform_bswtrg: None
+      cmr1_waveform_burst: The clock is not gated by an external signal
+      cmr1_waveform_clki: false
+      cmr1_waveform_control: false
+      cmr1_waveform_cpcdis: false
+      cmr1_waveform_cpcstop: false
+      cmr1_waveform_eevt: TIOB
+      cmr1_waveform_eevtedg: The clock is not gated by an external signal
+      cmr1_waveform_enetrg: false
+      cmr1_waveform_tcclks: Internal MCK/2 clock signal
+      cmr1_waveform_wave: true
+      cmr1_waveform_wavsel: UP mode without automatic trigger on RC Compare
+      cmr2_capture_abetrg: false
+      cmr2_capture_burst: The clock is not gated by an external signal
+      cmr2_capture_clki: false
+      cmr2_capture_control: false
+      cmr2_capture_cpctrg: true
+      cmr2_capture_etrgedg: The clock is not gated by an external signal
+      cmr2_capture_ldbdis: false
+      cmr2_capture_ldbstop: false
+      cmr2_capture_ldra: None
+      cmr2_capture_ldrb: None
+      cmr2_capture_sbsmplr: Load a Capture Register each selected edge
+      cmr2_capture_tcclks: XC1
+      cmr2_capture_wave: false
+      cmr2_waveform_acpa: None
+      cmr2_waveform_acpc: Toggle
+      cmr2_waveform_aeevt: None
+      cmr2_waveform_aswtrg: None
+      cmr2_waveform_bcpb: None
+      cmr2_waveform_bcpc: None
+      cmr2_waveform_beevt: None
+      cmr2_waveform_bswtrg: None
+      cmr2_waveform_burst: The clock is not gated by an external signal
+      cmr2_waveform_clki: false
+      cmr2_waveform_control: true
+      cmr2_waveform_cpcdis: false
+      cmr2_waveform_cpcstop: false
+      cmr2_waveform_eevt: TIOB
+      cmr2_waveform_eevtedg: The clock is not gated by an external signal
+      cmr2_waveform_enetrg: false
+      cmr2_waveform_tcclks: Internal MCK/8 clock signal
+      cmr2_waveform_wave: true
+      cmr2_waveform_wavsel: UP mode with automatic trigger on RC Compare
+      ier0_control: true
+      ier0_covfs: false
+      ier0_cpas: false
+      ier0_cpbs: false
+      ier0_cpcs: true
+      ier0_endrx: false
+      ier0_etrgs: false
+      ier0_ldras: false
+      ier0_ldrbs: false
+      ier0_lovrs: false
+      ier0_rxbuff: false
+      ier1_control: true
+      ier1_covfs: false
+      ier1_cpas: false
+      ier1_cpbs: false
+      ier1_cpcs: true
+      ier1_endrx: false
+      ier1_etrgs: false
+      ier1_ldras: false
+      ier1_ldrbs: false
+      ier1_lovrs: false
+      ier1_rxbuff: false
+      ier2_control: false
+      ier2_covfs: false
+      ier2_cpas: false
+      ier2_cpbs: false
+      ier2_cpcs: false
+      ier2_endrx: false
+      ier2_etrgs: false
+      ier2_ldras: false
+      ier2_ldrbs: false
+      ier2_lovrs: false
+      ier2_rxbuff: false
+      ra0_ra: 0
+      ra1_ra: 0
+      ra2_ra: 0
+      rb0_rb: 0
+      rb1_rb: 0
+      rb2_rb: 0
+      rc0_rc: 15000
+      rc1_rc: 5
+      rc2_rc: 30000
+      smmr0_control: false
+      smmr0_down: false
+      smmr0_gcen: false
+      smmr1_control: false
+      smmr1_down: false
+      smmr1_gcen: false
+      smmr2_control: false
+      smmr2_down: false
+      smmr2_gcen: false
+    optional_signals: []
+    variant: null
+    clocks:
+      domain_group:
+        nodes:
+        - name: TC
+          input: Master Clock (MCK)
+          external: false
+          external_frequency: 0
+        configuration:
+          tc_clock_source: Master Clock (MCK)
+  IMU_TIMER:
+    user_label: IMU_TIMER
+    definition: Atmel:SAMG55_Drivers:0.0.1::ATSAMG55J19A-AU::TC1::driver_config_definition::Timer::Lite:TC:Timer
+    functionality: Timer
+    api: Lite:TC:Timer
+    configuration:
+      bcr_sync: false
+      bmr_control: false
+      bmr_tc0xc0s: 'Signal connected to XC0: TCLK0'
+      bmr_tc1xc1s: 'Signal connected to XC1: TCLK1'
+      bmr_tc2xc2s: 'Signal connected to XC2: TCLK2'
+      channel0_control: true
+      channel0_mode: Channel 0 configure in Capture Mode
+      channel1_control: false
+      channel1_mode: Chennal 1 not configured
+      channel2_control: false
+      channel2_mode: Chennal 2 not configured
+      cmr0_capture_abetrg: false
+      cmr0_capture_burst: The clock is not gated by an external signal
+      cmr0_capture_clki: false
+      cmr0_capture_control: true
+      cmr0_capture_cpctrg: true
+      cmr0_capture_etrgedg: The clock is not gated by an external signal
+      cmr0_capture_ldbdis: false
+      cmr0_capture_ldbstop: false
+      cmr0_capture_ldra: None
+      cmr0_capture_ldrb: None
+      cmr0_capture_sbsmplr: Load a Capture Register each selected edge
+      cmr0_capture_tcclks: Internal MCK/8 clock signal
+      cmr0_capture_wave: false
+      cmr0_waveform_acpa: None
+      cmr0_waveform_acpc: None
+      cmr0_waveform_aeevt: None
+      cmr0_waveform_aswtrg: None
+      cmr0_waveform_bcpb: None
+      cmr0_waveform_bcpc: None
+      cmr0_waveform_beevt: None
+      cmr0_waveform_bswtrg: None
+      cmr0_waveform_burst: The clock is not gated by an external signal
+      cmr0_waveform_clki: false
+      cmr0_waveform_control: false
+      cmr0_waveform_cpcdis: false
+      cmr0_waveform_cpcstop: false
+      cmr0_waveform_eevt: TIOB
+      cmr0_waveform_eevtedg: The clock is not gated by an external signal
+      cmr0_waveform_enetrg: false
+      cmr0_waveform_tcclks: Internal MCK/2 clock signal
+      cmr0_waveform_wave: true
+      cmr0_waveform_wavsel: UP mode without automatic trigger on RC Compare
+      cmr1_capture_abetrg: false
+      cmr1_capture_burst: The clock is not gated by an external signal
+      cmr1_capture_clki: false
+      cmr1_capture_control: false
+      cmr1_capture_cpctrg: false
+      cmr1_capture_etrgedg: The clock is not gated by an external signal
+      cmr1_capture_ldbdis: false
+      cmr1_capture_ldbstop: false
+      cmr1_capture_ldra: None
+      cmr1_capture_ldrb: None
+      cmr1_capture_sbsmplr: Load a Capture Register each selected edge
+      cmr1_capture_tcclks: Internal MCK/2 clock signal
+      cmr1_capture_wave: false
+      cmr1_waveform_acpa: None
+      cmr1_waveform_acpc: None
+      cmr1_waveform_aeevt: None
+      cmr1_waveform_aswtrg: None
+      cmr1_waveform_bcpb: None
+      cmr1_waveform_bcpc: None
+      cmr1_waveform_beevt: None
+      cmr1_waveform_bswtrg: None
+      cmr1_waveform_burst: The clock is not gated by an external signal
+      cmr1_waveform_clki: false
+      cmr1_waveform_control: false
+      cmr1_waveform_cpcdis: false
+      cmr1_waveform_cpcstop: false
+      cmr1_waveform_eevt: TIOB
+      cmr1_waveform_eevtedg: The clock is not gated by an external signal
+      cmr1_waveform_enetrg: false
+      cmr1_waveform_tcclks: Internal MCK/2 clock signal
+      cmr1_waveform_wave: true
+      cmr1_waveform_wavsel: UP mode without automatic trigger on RC Compare
+      cmr2_capture_abetrg: false
+      cmr2_capture_burst: The clock is not gated by an external signal
+      cmr2_capture_clki: false
+      cmr2_capture_control: false
+      cmr2_capture_cpctrg: false
+      cmr2_capture_etrgedg: The clock is not gated by an external signal
+      cmr2_capture_ldbdis: false
+      cmr2_capture_ldbstop: false
+      cmr2_capture_ldra: None
+      cmr2_capture_ldrb: None
+      cmr2_capture_sbsmplr: Load a Capture Register each selected edge
+      cmr2_capture_tcclks: Internal MCK/2 clock signal
+      cmr2_capture_wave: false
+      cmr2_waveform_acpa: None
+      cmr2_waveform_acpc: None
+      cmr2_waveform_aeevt: None
+      cmr2_waveform_aswtrg: None
+      cmr2_waveform_bcpb: None
+      cmr2_waveform_bcpc: None
+      cmr2_waveform_beevt: None
+      cmr2_waveform_bswtrg: None
+      cmr2_waveform_burst: The clock is not gated by an external signal
+      cmr2_waveform_clki: false
+      cmr2_waveform_control: false
+      cmr2_waveform_cpcdis: false
+      cmr2_waveform_cpcstop: false
+      cmr2_waveform_eevt: TIOB
+      cmr2_waveform_eevtedg: The clock is not gated by an external signal
+      cmr2_waveform_enetrg: false
+      cmr2_waveform_tcclks: Internal MCK/2 clock signal
+      cmr2_waveform_wave: true
+      cmr2_waveform_wavsel: UP mode without automatic trigger on RC Compare
+      ier0_control: true
+      ier0_covfs: false
+      ier0_cpas: false
+      ier0_cpbs: false
+      ier0_cpcs: true
+      ier0_endrx: false
+      ier0_etrgs: false
+      ier0_ldras: false
+      ier0_ldrbs: false
+      ier0_lovrs: false
+      ier0_rxbuff: false
+      ier1_control: false
+      ier1_covfs: false
+      ier1_cpas: false
+      ier1_cpbs: false
+      ier1_cpcs: false
+      ier1_endrx: false
+      ier1_etrgs: false
+      ier1_ldras: false
+      ier1_ldrbs: false
+      ier1_lovrs: false
+      ier1_rxbuff: false
+      ier2_control: false
+      ier2_covfs: false
+      ier2_cpas: false
+      ier2_cpbs: false
+      ier2_cpcs: false
+      ier2_endrx: false
+      ier2_etrgs: false
+      ier2_ldras: false
+      ier2_ldrbs: false
+      ier2_lovrs: false
+      ier2_rxbuff: false
+      ra0_ra: 0
+      ra1_ra: 0
+      ra2_ra: 0
+      rb0_rb: 0
+      rb1_rb: 0
+      rb2_rb: 0
+      rc0_rc: 60000
+      rc1_rc: 0
+      rc2_rc: 0
+      smmr0_control: false
+      smmr0_down: false
+      smmr0_gcen: false
+      smmr1_control: false
+      smmr1_down: false
+      smmr1_gcen: false
+      smmr2_control: false
+      smmr2_down: false
+      smmr2_gcen: false
+    optional_signals: []
+    variant: null
+    clocks:
+      domain_group:
+        nodes:
+        - name: TC
+          input: Master Clock (MCK)
+          external: false
+          external_frequency: 0
+        configuration:
+          tc_clock_source: Master Clock (MCK)
+  I2C_INT:
+    user_label: I2C_INT
+    definition: Atmel:SAMG55_Drivers:0.0.1::ATSAMG55J19A-AU::FLEXCOM0::driver_config_definition::I2C.Master.Standard~2FFast-mode::HAL:Driver:I2C.Master.Sync
+    functionality: I2C
+    api: HAL:Driver:I2C_Master_Sync
+    configuration:
+      i2c_master_advanced: false
+      i2c_master_baud_rate: 100000
+      i2c_master_digital_filter_enable: false
+      i2c_master_filter_threshold: Disabled
+      i2c_master_packet_error_check: false
+      i2c_master_pad_filter_enable: false
+      i2c_master_smbus_clock_prescaler: Divide by 2
+      i2c_master_smbus_enable: false
+      i2c_master_thigh_max: 0
+      i2c_master_tlow_mext: 0
+      i2c_master_tlow_sext: 0
+    optional_signals: []
+    variant:
+      specification: default
+      required_signals:
+      - name: FLEXCOM0/TWCK
+        pad: PA9
+        label: TWCK
+      - name: FLEXCOM0/TWD
+        pad: PA10
+        label: TWD
+    clocks:
+      domain_group:
+        nodes:
+        - name: FLEXCOM
+          input: Master Clock (MCK)
+          external: false
+          external_frequency: 0
+        configuration:
+          flexcom_clock_source: Master Clock (MCK)
+  USART_SAT:
+    user_label: USART_SAT
+    definition: Atmel:SAMG55_Drivers:0.0.1::ATSAMG55J19A-AU::FLEXCOM1::driver_config_definition::UART::HAL:Driver:USART.Async
+    functionality: USART
+    api: HAL:Driver:USART_Async
+    configuration:
+      usart_9bits_enable: false
+      usart__inack: The NACK is not generated
+      usart__oversampling_mode: 16 Oversampling
+      usart_advanced: false
+      usart_arch_fractional: 0
+      usart_arch_msbf: LSB is transmitted first
+      usart_baud_rate: 4800
+      usart_channel_mode: Normal Mode
+      usart_character_size: 8 bits
+      usart_clock_output_select: The USART does not drive the SCK pin
+      usart_dsnack: NACK is sent on the ISO line as soon as a parity error occurs
+      usart_invdata: Data isn't inverted, nomal mode
+      usart_manchester_filter_enable: false
+      usart_manchester_synchronization_mode: The Manchester start bit is a 0 to 1
+        transition
+      usart_max_iteration: 0
+      usart_parity: No parity
+      usart_receive_filter_enable: false
+      usart_start_frame_delimiter: Start frame delimiter is COMMAND or DATA SYNC
+      usart_stop_bit: 1 stop bit
+      variable_sync: User defined configuration
+    optional_signals: []
+    variant:
+      specification: default
+      required_signals:
+      - name: FLEXCOM1/RXD
+        pad: PB2
+        label: RXD
+      - name: FLEXCOM1/TXD
+        pad: PB3
+        label: TXD
+    clocks:
+      domain_group:
+        nodes:
+        - name: FLEXCOM
+          input: Master Clock (MCK)
+          external: false
+          external_frequency: 0
+        configuration:
+          flexcom_clock_source: Master Clock (MCK)
+  FLX2_I2C:
+    user_label: FLX2_I2C
+    definition: Atmel:SAMG55_Drivers:0.0.1::ATSAMG55J19A-AU::FLEXCOM2::driver_config_definition::I2C.Master.Standard~2FFast-mode::HAL:Driver:I2C.Master.Sync
+    functionality: I2C
+    api: HAL:Driver:I2C_Master_Sync
+    configuration:
+      i2c_master_advanced: false
+      i2c_master_baud_rate: 100000
+      i2c_master_digital_filter_enable: false
+      i2c_master_filter_threshold: Disabled
+      i2c_master_packet_error_check: false
+      i2c_master_pad_filter_enable: false
+      i2c_master_smbus_clock_prescaler: Divide by 2
+      i2c_master_smbus_enable: false
+      i2c_master_thigh_max: 0
+      i2c_master_tlow_mext: 0
+      i2c_master_tlow_sext: 0
+    optional_signals: []
+    variant:
+      specification: default
+      required_signals:
+      - name: FLEXCOM2/TWCK
+        pad: PA5
+        label: TWCK
+      - name: FLEXCOM2/TWD
+        pad: PA6
+        label: TWD
+    clocks:
+      domain_group:
+        nodes:
+        - name: FLEXCOM
+          input: Master Clock (MCK)
+          external: false
+          external_frequency: 0
+        configuration:
+          flexcom_clock_source: Master Clock (MCK)
+  USART_GNSS:
+    user_label: USART_GNSS
+    definition: Atmel:SAMG55_Drivers:0.0.1::ATSAMG55J19A-AU::FLEXCOM4::driver_config_definition::UART::HAL:Driver:USART.Async
+    functionality: USART
+    api: HAL:Driver:USART_Async
+    configuration:
+      usart_9bits_enable: false
+      usart__inack: The NACK is not generated
+      usart__oversampling_mode: 16 Oversampling
+      usart_advanced: false
+      usart_arch_fractional: 0
+      usart_arch_msbf: LSB is transmitted first
+      usart_baud_rate: 4800
+      usart_channel_mode: Normal Mode
+      usart_character_size: 8 bits
+      usart_clock_output_select: The USART does not drive the SCK pin
+      usart_dsnack: NACK is sent on the ISO line as soon as a parity error occurs
+      usart_invdata: Data isn't inverted, nomal mode
+      usart_manchester_filter_enable: false
+      usart_manchester_synchronization_mode: The Manchester start bit is a 0 to 1
+        transition
+      usart_max_iteration: 0
+      usart_parity: No parity
+      usart_receive_filter_enable: false
+      usart_start_frame_delimiter: Start frame delimiter is COMMAND or DATA SYNC
+      usart_stop_bit: 1 stop bit
+      variable_sync: User defined configuration
+    optional_signals: []
+    variant:
+      specification: default
+      required_signals:
+      - name: FLEXCOM4/RXD
+        pad: PB9
+        label: RXD
+      - name: FLEXCOM4/TXD
+        pad: PB8
+        label: TXD
+    clocks:
+      domain_group:
+        nodes:
+        - name: FLEXCOM
+          input: Master Clock (MCK)
+          external: false
+          external_frequency: 0
+        configuration:
+          flexcom_clock_source: Master Clock (MCK)
+  FLX7_USART:
+    user_label: FLX7_USART
+    definition: Atmel:SAMG55_Drivers:0.0.1::ATSAMG55J19A-AU::FLEXCOM7::driver_config_definition::UART::HAL:Driver:USART.Async
+    functionality: USART
+    api: HAL:Driver:USART_Async
+    configuration:
+      usart_9bits_enable: false
+      usart__inack: The NACK is not generated
+      usart__oversampling_mode: 16 Oversampling
+      usart_advanced: false
+      usart_arch_fractional: 0
+      usart_arch_msbf: LSB is transmitted first
+      usart_baud_rate: 4800
+      usart_channel_mode: Normal Mode
+      usart_character_size: 8 bits
+      usart_clock_output_select: The USART does not drive the SCK pin
+      usart_dsnack: NACK is sent on the ISO line as soon as a parity error occurs
+      usart_invdata: Data isn't inverted, nomal mode
+      usart_manchester_filter_enable: false
+      usart_manchester_synchronization_mode: The Manchester start bit is a 0 to 1
+        transition
+      usart_max_iteration: 0
+      usart_parity: No parity
+      usart_receive_filter_enable: false
+      usart_start_frame_delimiter: Start frame delimiter is COMMAND or DATA SYNC
+      usart_stop_bit: 1 stop bit
+      variable_sync: User defined configuration
+    optional_signals: []
+    variant:
+      specification: default
+      required_signals:
+      - name: FLEXCOM7/RXD
+        pad: PA27
+        label: RXD
+      - name: FLEXCOM7/TXD
+        pad: PA28
+        label: TXD
+    clocks:
+      domain_group:
+        nodes:
+        - name: FLEXCOM
+          input: Master Clock (MCK)
+          external: false
+          external_frequency: 0
+        configuration:
+          flexcom_clock_source: Master Clock (MCK)
+pads:
+  GNSS_1PPS:
+    name: PA4
+    definition: Atmel:SAMG55_Drivers:0.0.1::ATSAMG55J19A-AU::pad::PA4
+    mode: Digital input
+    user_label: GNSS_1PPS
+    configuration:
+      pad_pull_config: Pull-down
+  GNSS_ON:
+    name: PA3
+    definition: Atmel:SAMG55_Drivers:0.0.1::ATSAMG55J19A-AU::pad::PA3
+    mode: Digital output
+    user_label: GNSS_ON
+    configuration:
+      pad_initial_level: High
+  GNSS_RESET:
+    name: PA0
+    definition: Atmel:SAMG55_Drivers:0.0.1::ATSAMG55J19A-AU::pad::PA0
+    mode: Digital output
+    user_label: GNSS_RESET
+    configuration: null
+  LEDS_ON:
+    name: PA1
+    definition: Atmel:SAMG55_Drivers:0.0.1::ATSAMG55J19A-AU::pad::PA1
+    mode: Digital output
+    user_label: LEDS_ON
+    configuration: null
+  FLLX2_I2C_SCL:
+    name: PA5
+    definition: Atmel:SAMG55_Drivers:0.0.1::ATSAMG55J19A-AU::pad::PA5
+    mode: Peripheral IO
+    user_label: FLLX2_I2C_SCL
+    configuration: null
+  LED_R:
+    name: PB15
+    definition: Atmel:SAMG55_Drivers:0.0.1::ATSAMG55J19A-AU::pad::PB15
+    mode: Digital output
+    user_label: LED_R
+    configuration: null
+  LED_G:
+    name: PB14
+    definition: Atmel:SAMG55_Drivers:0.0.1::ATSAMG55J19A-AU::pad::PB14
+    mode: Digital output
+    user_label: LED_G
+    configuration: null
+  SLEEP_WARN:
+    name: PA31
+    definition: Atmel:SAMG55_Drivers:0.0.1::ATSAMG55J19A-AU::pad::PA31
+    mode: Digital input
+    user_label: SLEEP_WARN
+    configuration:
+      pad_pull_config: Pull-down
+  FLX_I2C_SDA:
+    name: PA6
+    definition: Atmel:SAMG55_Drivers:0.0.1::ATSAMG55J19A-AU::pad::PA6
+    mode: Peripheral IO
+    user_label: FLX_I2C_SDA
+    configuration: null
+  EXT_5V_ON:
+    name: PA30
+    definition: Atmel:SAMG55_Drivers:0.0.1::ATSAMG55J19A-AU::pad::PA30
+    mode: Digital output
+    user_label: EXT_5V_ON
+    configuration: null
+  FLX7_SCK_IO:
+    name: PA29
+    definition: Atmel:SAMG55_Drivers:0.0.1::ATSAMG55J19A-AU::pad::PA29
+    mode: Digital output
+    user_label: FLX7_SCK_IO
+    configuration: null
+  FLX7_UART_TX:
+    name: PA28
+    definition: Atmel:SAMG55_Drivers:0.0.1::ATSAMG55J19A-AU::pad::PA28
+    mode: Peripheral IO
+    user_label: FLX7_UART_TX
+    configuration: null
+  EXT_3V3_OFF:
+    name: PA23
+    definition: Atmel:SAMG55_Drivers:0.0.1::ATSAMG55J19A-AU::pad::PA23
+    mode: Digital output
+    user_label: EXT_3V3_OFF
+    configuration:
+      pad_initial_level: High
+  EXT_1V8_OFF:
+    name: PA22
+    definition: Atmel:SAMG55_Drivers:0.0.1::ATSAMG55J19A-AU::pad::PA22
+    mode: Digital output
+    user_label: EXT_1V8_OFF
+    configuration:
+      pad_initial_level: High
+  I2C_SENSOR_3V3_OFF:
+    name: PA21
+    definition: Atmel:SAMG55_Drivers:0.0.1::ATSAMG55J19A-AU::pad::PA21
+    mode: Digital output
+    user_label: I2C_SENSOR_3V3_OFF
+    configuration:
+      pad_initial_level: High
+  V_BATT_SW_0758:
+    name: PA17
+    definition: Atmel:SAMG55_Drivers:0.0.1::ATSAMG55J19A-AU::pad::PA17
+    mode: Analog
+    user_label: V_BATT_SW_0758
+    configuration: null
+  KIM_ON:
+    name: PA18
+    definition: Atmel:SAMG55_Drivers:0.0.1::ATSAMG55J19A-AU::pad::PA18
+    mode: Digital output
+    user_label: KIM_ON
+    configuration: null
+  KIM_TX:
+    name: PB2
+    definition: Atmel:SAMG55_Drivers:0.0.1::ATSAMG55J19A-AU::pad::PB2
+    mode: Peripheral IO
+    user_label: KIM_TX
+    configuration: null
+  KIM_RX:
+    name: PB3
+    definition: Atmel:SAMG55_Drivers:0.0.1::ATSAMG55J19A-AU::pad::PB3
+    mode: Peripheral IO
+    user_label: KIM_RX
+    configuration: null
+  SD_OFF:
+    name: PA13
+    definition: Atmel:SAMG55_Drivers:0.0.1::ATSAMG55J19A-AU::pad::PA13
+    mode: Digital output
+    user_label: SD_OFF
+    configuration:
+      pad_initial_level: High
+  SD_CD:
+    name: PA12
+    definition: Atmel:SAMG55_Drivers:0.0.1::ATSAMG55J19A-AU::pad::PA12
+    mode: Digital input
+    user_label: SD_CD
+    configuration:
+      pad_pull_config: Pull-up
+  SD_CS:
+    name: PA11
+    definition: Atmel:SAMG55_Drivers:0.0.1::ATSAMG55J19A-AU::pad::PA11
+    mode: Digital output
+    user_label: SD_CS
+    configuration: null
+  SD_MOSI_DI:
+    name: PB10
+    definition: Atmel:SAMG55_Drivers:0.0.1::ATSAMG55J19A-AU::pad::PB10
+    mode: Digital output
+    user_label: SD_MOSI_DI
+    configuration: null
+  SD_MISO_DO:
+    name: PB11
+    definition: Atmel:SAMG55_Drivers:0.0.1::ATSAMG55J19A-AU::pad::PB11
+    mode: Digital input
+    user_label: SD_MISO_DO
+    configuration:
+      pad_pull_config: Pull-up
+  I2C_INT_SDA:
+    name: PA10
+    definition: Atmel:SAMG55_Drivers:0.0.1::ATSAMG55J19A-AU::pad::PA10
+    mode: Peripheral IO
+    user_label: I2C_INT_SDA
+    configuration: null
+  I2C_INT_SCL:
+    name: PA9
+    definition: Atmel:SAMG55_Drivers:0.0.1::ATSAMG55J19A-AU::pad::PA9
+    mode: Peripheral IO
+    user_label: I2C_INT_SCL
+    configuration: null
+  FLX7_UART_RX:
+    name: PA27
+    definition: Atmel:SAMG55_Drivers:0.0.1::ATSAMG55J19A-AU::pad::PA27
+    mode: Peripheral IO
+    user_label: FLX7_UART_RX
+    configuration: null
+  SD_SCK:
+    name: PB13
+    definition: Atmel:SAMG55_Drivers:0.0.1::ATSAMG55J19A-AU::pad::PB13
+    mode: Digital output
+    user_label: SD_SCK
+    configuration: null
+  GNSS_RX:
+    name: PB8
+    definition: Atmel:SAMG55_Drivers:0.0.1::ATSAMG55J19A-AU::pad::PB8
+    mode: Peripheral IO
+    user_label: GNSS_RX
+    configuration: null
+  GNSS_TX:
+    name: PB9
+    definition: Atmel:SAMG55_Drivers:0.0.1::ATSAMG55J19A-AU::pad::PB9
+    mode: Peripheral IO
+    user_label: GNSS_TX
+    configuration: null
+toolchain_options: []
+static_files: []

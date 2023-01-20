@@ -199,7 +199,7 @@ In this project, the event loop processor and queue structure are replaced by th
 
 ----
 
-## Implementation
+## Detail Specification and Implementation
 
 ### *Protocol Specification*
 

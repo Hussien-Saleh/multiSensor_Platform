@@ -332,7 +332,6 @@ Fig.14: Event-driven state-machine framework
 </div>
 <br /> 
 
-
 #### *Task Scheduler*
 
 The scheduled tasks are organized as a singly linked list and represented by a data structure. The structure parameters must be initialized to define and schedule sensory tasks. A task is scheduled to execute after a predefined time interval described by (time_expire). The milliseconds are counted down until the time expires and the sensory task is executed. Besides, two parameters can be passed to the scheduled sensory task function. 
@@ -344,15 +343,12 @@ There are two options for scheduling tasks:
 
 A predefined task descriptor can be added to the scheduler using scheduler_add_task_( ) API function call. Likewise, added tasks can be removed from the scheduler with scheduler_remove_task_( ). The scheduler initializes the hardware timer using scheduler_init_( ). The timer interrupt registers a callback function for updating the scheduler every 1 ms by decreasing (time_expire) of all scheduled tasks by 1 ms and mark expired tasks for execution. The API function scheduler_run_( ) runs the scheduler in a superloop. It executes the marked executable task and removes non-periodic tasks from the list. The system running the scheduler must allocate memory to store task descriptions since the scheduler does not reserve the memory itself.
 
-<br /> 
-
 #### *Data Logger Ring Buffer*
 
 The data logger ring buffer is defined by a structure. The buffer is represented by a head where new data is written to and a tail which contains the most outdated initial data to be accessed. Both the head and tail are declared as volatile since they are accessed from the application and interrupt contexts. Both are incremented and automatically wrapped around when overflow occurs.
 
 The buffer is a statically allocated array of bytes which is generic for storing any type of data. To accomplish that, the reserved memory size is provided by the end-user defining the number of stored items in addition to the size of each item.
 An offset is calculated depending on the items number and the allocated item size to determine the index location where data is accessed and stored. The number of items is restricted to be an even power of two for code optimization purposes when the offset is calculated.
-
 
 In the scope of this project, the maximum number of data sets to be stored inside the buffer is defined to be 16 sets with an option to dequeue the data from the buffer depending on the percentage of the maximum number of stored items or the sensory data sets in this case. Four selectable options are defined: one percent, twenty five percent, fifty percent, and seventy five percent. The buffer is implemented to store sets of sensory data. The data set stored in the logger is restricted to a total of twenty three bytes organized as follows: the sensor ID is stored in one byte, eight bytes for allocating the timestamp, each of the measurement type and size has one byte storage, whereas a maximum of twelve byte is allocated for the measurement data. 
 

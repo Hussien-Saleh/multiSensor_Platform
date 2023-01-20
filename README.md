@@ -1,4 +1,4 @@
-# Modular energy-efficient multi-sensor platform for autonomous ocean drifter
+# Modular energy-efficient self-sufficient multi-sensor platform for autonomous ocean drifter
 
 ## Introduction
 

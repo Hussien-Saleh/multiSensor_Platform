@@ -473,7 +473,17 @@ Fig.21: Master-Slave Data Flow Validation
 </div>
 <br />
 
+### *Low-Power Modes Findings*
 
+The validation has been conducted using a data acquisition device to record the analog input to the main board for a sampling period of 5 minutes with a rate of 10000 samples per second. Mean values of voltage, current and power consumption are subsequently calculated. Comparisons between the amount of consumed current and power required to carry out the same sensory tasks before and after applying the power saving methodology are evaluated.
 
+The integrated GPS module consumed the most energy within the system followed by the IMU and temperature sensor modules. Hence, the initial software has been enhanced in terms of energy efficiency to ensure a notable depletion in the power consumption using the following methodology: the time needed to fix the first valid GPS location is decreased using a more optimized GPS startup configuration. In addition, the switching between active and low power modes for each sensor module has been defined and implemented using the scheduling system.
 
+<p align="center">
+<img width="658" alt="Screenshot 2023-01-20 at 04 36 06" src="https://user-images.githubusercontent.com/60155345/213612376-624ffb4e-6d4a-470e-98d5-f638f851f338.png">
+
+<div align="center">
+Fig.22: Power Saving Findings
+</div>
+<br />
 
